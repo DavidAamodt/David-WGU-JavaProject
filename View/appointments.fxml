@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.appointmentsController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="1000.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="800.0">
+               <children>
+                  <Label text="Appointments">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="View appointmets scheduled in the next: ">
+                     <HBox.margin>
+                        <Insets left="400.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="monthRadio" mnemonicParsing="false" onAction="#monthSelected" selected="true" text="Month">
+                     <HBox.margin>
+                        <Insets left="10.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Date" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="weekRadio" mnemonicParsing="false" onAction="#weekSelected" text="Week" toggleGroup="$Date">
+                     <HBox.margin>
+                        <Insets right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <Label>
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="630.0">
+                     <children>
+                        <Label text="Currnetly Displaying: " />
+                        <Label fx:id="dateLabel" layoutX="10.0" layoutY="14.0" text="(Dates Displayed)" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#previousGroupClicked" text="Previous Time Group" />
+                  <Button mnemonicParsing="false" onAction="#nextGroupClicked" text="Next Time Group" />
+               </children>
+               <VBox.margin>
+                  <Insets right="75.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="appointmentsTable" prefHeight="325.0" prefWidth="770.0">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="75.0" text="ID #" />
+                <TableColumn fx:id="titleCol" prefWidth="75.0" text="Title" />
+                  <TableColumn fx:id="descriptionCol" prefWidth="75.0" text="Description" />
+                  <TableColumn fx:id="locationCol" prefWidth="75.0" text="Location" />
+                  <TableColumn fx:id="contactCol" prefWidth="100.0" text="Contact" />
+                  <TableColumn fx:id="typeCol" prefWidth="120.0" text="Type" />
+                  <TableColumn fx:id="startCol" prefWidth="150.0" text="Start Date and Time" />
+                  <TableColumn fx:id="endCol" prefWidth="150.0" text="End Date and Time" />
+                  <TableColumn fx:id="customerIdCol" prefWidth="75.0" text="Customer ID" />
+                  <TableColumn fx:id="userIdCol" prefWidth="75.0" text="User ID" />
+              </columns>
+            </TableView>
+            <HBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="970.0" spacing="10.0">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addAppointmentClicked" text="Add Appointment">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#updateAppointmentClicked" text="Update Appointment">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#deleteClicked" text="Delete Appointment">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+                     <HBox.margin>
+                        <Insets left="255.0" />
+                     </HBox.margin>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#viewCustomersClicked" text="View Customers">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onReportsClicked" text="View Reports">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#logOutClicked" text="Log Out">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding></HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

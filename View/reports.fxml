@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.reportsController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="250.0" prefWidth="200.0">
+         <children>
+            <HBox minHeight="-Infinity" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label text="Reports">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#byMonthClicked" text="# of Appointments by Month">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#typeClicked" text="# of Appointments by Type">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#contactClicked" text="Contact Schedules">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#customerClicked" text="Customer Schedules">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" layoutY="250.0" prefHeight="50.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#returnClicked" text="Return to Appointments">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

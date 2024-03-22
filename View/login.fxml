@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.loginController">
+   <children>
+      <VBox layoutX="74.0" layoutY="45.0" prefHeight="100.0" prefWidth="300.0" spacing="5.0">
+         <children>
+            <Label fx:id="UsernameLabel" text="Username:" />
+            <TextField fx:id="UsernameField" promptText="Username" />
+            <Label fx:id="PasswordLabel" text="Password:" />
+            <TextField fx:id="PasswordField" promptText="Password" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+      <Label fx:id="LoginTitle" text="Login">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" top="10.0" />
+         </padding>
+      </Label>
+      <Button fx:id="LoginButton" layoutX="391.0" layoutY="129.0" mnemonicParsing="false" onAction="#LoginAttempt" text="Login" />
+      <HBox alignment="BOTTOM_RIGHT" layoutY="222.0" prefHeight="25.0" prefWidth="500.0" spacing="5.0">
+         <children>
+            <Label fx:id="LocationLabel" text="Location: " />
+            <Label fx:id="CurrentLocation" text="*CurrentLocation*" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" right="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

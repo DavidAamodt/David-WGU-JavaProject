@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.customersController">
+   <children>
+      <VBox prefHeight="335.0" prefWidth="800.0" spacing="10.0">
+         <children>
+            <Label text="Customers">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <TableView fx:id="customersTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="customerID" prefWidth="50.0" text="ID #" />
+                <TableColumn fx:id="customerName" prefWidth="125.0" text="Name" />
+                  <TableColumn fx:id="customerAddress" prefWidth="150.0" text="Address" />
+                  <TableColumn fx:id="postalCodeCol" prefWidth="75.0" text="Postal Code" />
+                  <TableColumn fx:id="customerPhone" prefWidth="125.0" text="Phone #" />
+                  <TableColumn fx:id="countryCol" prefWidth="120.0" text="Country" />
+                  <TableColumn fx:id="customerStateProvince" prefWidth="125.0" text="State/Province" />
+              </columns>
+            </TableView>
+            <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addCustomerPressed" text="Add Customer" />
+                  <Button layoutX="10.0" layoutY="20.0" mnemonicParsing="false" onAction="#updateCustomerClicked" text="Update Customer" />
+                  <Button mnemonicParsing="false" onAction="#deleteCustomerClicked" text="Delete Customer" />
+                  <Button layoutX="10.0" layoutY="20.0" mnemonicParsing="false" onAction="#returnAppointmentsClicked" text="Return to Appointmets" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </padding></VBox>
+   </children>
+</AnchorPane>
